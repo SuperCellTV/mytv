@@ -1,0 +1,67 @@
+/* تصميم بسيط */
+body {
+    font-family: 'Tajawal', sans-serif; /* استخدام خط الكتابة Tajawal للعربية */
+    color: #333; /* لون النص */
+    background-image: url('https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg'); /* تغيير الصورة حسب الرابط المطلوب */
+    background-size: cover; /* تغطية الخلفية بالشاشة بالكامل */
+    background-position: center; /* وضع الصورة في الوسط */
+    text-align: center; /* محاذاة النص في الوسط */
+    font-size: 20px; /* حجم الخط للأجهزة المحمولة */
+    margin: 0; /* إلغاء الهوامش */
+    padding: 0; /* إلغاء الحشو */
+}
+
+h1 {
+    color: #007bff; /* لون العنوان الرئيسي */
+    font-size: 48px; /* تكبير حجم العنوان */
+}
+
+h1:hover {
+    animation: shake 0.5s; /* جعل العنوان متحركًا عند وقوف المؤشر */
+    animation-fill-mode: forwards; /* تثبيت موقف العنوان عند انتهاء التحرك */
+}
+
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+p {
+    margin-bottom: 10px; /* هامش لأسفل الفقرة للأجهزة المحمولة */
+}
+
+ul {
+    list-style-type: none; /* إزالة نقاط القائمة */
+    padding: 0; /* إزالة الهوامش الداخلية للقائمة */
+}
+
+li {
+    margin-bottom: 5px; /* هامش لأسفل كل عنصر في القائمة للأجهزة المحمولة */
+}
+
+a {
+    color: #007bff; /* لون الروابط */
+    text-decoration: none; /* إزالة تأثير التحتية عند التحويل */
+}
+
+a:hover {
+    text-decoration: underline; /* تحتية الرابط عند تحويل المؤشر عليه */
+}
+
+/* تصميم الروابط للأعلى */
+.nav-links {
+    position: absolute; /* تحديد وضع الروابط */
+    top: 10px; /* تحديد المسافة من الجزء العلوي للصفحة */
+    left: 50%; /* تحديد المسافة من الجهة اليمنى للصفحة */
+    transform: translateX(-50%); /* تحريك الروابط إلى الوسط بناءً على الجهة اليسرى */
+}
+
+/* Media Query للأجهزة المحمولة */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* حجم الخط للأجهزة المحمولة الصغيرة */
+    }
+}
