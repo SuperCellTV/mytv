@@ -1,0 +1,85 @@
+/* Reset CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZSRnQO2tWrDBBdkUlDZGQKIUSjhHC__UX0bqyJwOwGiii3feALwjx2MvfJDnfZZkGCrTuo-xFsA1FELbagmvu3B9IFZXP4Cas=w1920-h922-rw-v1');
+    background-size: cover; /* جعل الصورة تغطي الشاشة بأكملها */
+    color: #ff0000; /* لون النص الأحمر */
+}
+
+/* شريط العنوان */
+#announcement-bar {
+    background-color: rgba(0, 0, 0, 0.8); /* لون الخلفية */
+    color: #fff; /* لون النص */
+    padding: 10px; /* التباعد الداخلي */
+    font-size: 16px; /* حجم الخط */
+    position: fixed; /* تثبيت العنصر في الأعلى */
+    top: 0; /* البداية من الأعلى */
+    width: 100%; /* العرض الكامل */
+    animation: slideIn 1s ease forwards;
+}
+
+/* تنسيق النص داخل الشريط */
+#announcement-bar p {
+    margin: 0; /* إزالة التباعد الخارجي للفقرة */
+}
+
+/* تأثير الإدخال للشريط */
+@keyframes slideIn {
+    0% {
+        top: -50px; /* البداية من الأعلى بمقدار 50 بيكسل */
+    }
+    100% {
+        top: 0; /* النهاية في الأعلى */
+    }
+}
+
+/* شكل الحاوية */
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* ظلال لتحسين المظهر */
+}
+
+/* المشغل الحي */
+#live-stream {
+    width: 90%; /* توسيع المشغل ليغطي 90% من العرض */
+    max-width: 600px; /* أقصى عرض للمشغل */
+    margin: 0 auto; /* توسيط المشغل على الأفقي */
+}
+
+/* العنوان */
+h1 {
+    margin-top: 50px; /* تباعد العنوان من الأعلى */
+    font-family: 'Arial Black', sans-serif; /* تغيير الخط ل Arial Black أو أي خط آخر تفضله */
+    animation: slideIn 1s ease forwards;
+}
+
+/* الزر */
+.settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* خلفية شفافة للزر */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.settings:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* تنسيقات للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    body {
+        /* إضافة تنسيقات CSS خاصة للهواتف المحمولة هنا */
+    }
+
+    /* إضافة تنسيقات إضافية لعناصر أخرى حسب الحاجة */
+}
