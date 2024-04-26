@@ -1,85 +1,67 @@
-/* Reset CSS */
+/* تصميم بسيط */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-image: url('https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZSRnQO2tWrDBBdkUlDZGQKIUSjhHC__UX0bqyJwOwGiii3feALwjx2MvfJDnfZZkGCrTuo-xFsA1FELbagmvu3B9IFZXP4Cas=w1920-h922-rw-v1');
-    background-size: cover; /* جعل الصورة تغطي الشاشة بأكملها */
-    color: #ff0000; /* لون النص الأحمر */
+    font-family: 'Tajawal', sans-serif; /* استخدام خط الكتابة Tajawal للعربية */
+    color: #333; /* لون النص */
+    background-image: url('https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg'); /* تغيير الصورة حسب الرابط المطلوب */
+    background-size: cover; /* تغطية الخلفية بالشاشة بالكامل */
+    background-position: center; /* وضع الصورة في الوسط */
+    text-align: center; /* محاذاة النص في الوسط */
+    font-size: 20px; /* حجم الخط للأجهزة المحمولة */
+    margin: 0; /* إلغاء الهوامش */
+    padding: 0; /* إلغاء الحشو */
 }
 
-/* شريط العنوان */
-#announcement-bar {
-    background-color: rgba(0, 0, 0, 0.8); /* لون الخلفية */
-    color: #fff; /* لون النص */
-    padding: 10px; /* التباعد الداخلي */
-    font-size: 16px; /* حجم الخط */
-    position: fixed; /* تثبيت العنصر في الأعلى */
-    top: 0; /* البداية من الأعلى */
-    width: 100%; /* العرض الكامل */
-    animation: slideIn 1s ease forwards;
-}
-
-/* تنسيق النص داخل الشريط */
-#announcement-bar p {
-    margin: 0; /* إزالة التباعد الخارجي للفقرة */
-}
-
-/* تأثير الإدخال للشريط */
-@keyframes slideIn {
-    0% {
-        top: -50px; /* البداية من الأعلى بمقدار 50 بيكسل */
-    }
-    100% {
-        top: 0; /* النهاية في الأعلى */
-    }
-}
-
-/* شكل الحاوية */
-.container {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* ظلال لتحسين المظهر */
-}
-
-/* المشغل الحي */
-#live-stream {
-    width: 90%; /* توسيع المشغل ليغطي 90% من العرض */
-    max-width: 600px; /* أقصى عرض للمشغل */
-    margin: 0 auto; /* توسيط المشغل على الأفقي */
-}
-
-/* العنوان */
 h1 {
-    margin-top: 50px; /* تباعد العنوان من الأعلى */
-    font-family: 'Arial Black', sans-serif; /* تغيير الخط ل Arial Black أو أي خط آخر تفضله */
-    animation: slideIn 1s ease forwards;
+    color: #007bff; /* لون العنوان الرئيسي */
+    font-size: 48px; /* تكبير حجم العنوان */
 }
 
-/* الزر */
-.settings {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.5); /* خلفية شفافة للزر */
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s;
+h1:hover {
+    animation: shake 0.5s; /* جعل العنوان متحركًا عند وقوف المؤشر */
+    animation-fill-mode: forwards; /* تثبيت موقف العنوان عند انتهاء التحرك */
 }
 
-.settings:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
 }
 
-/* تنسيقات للهواتف المحمولة */
-@media screen and (max-width: 768px) {
+p {
+    margin-bottom: 10px; /* هامش لأسفل الفقرة للأجهزة المحمولة */
+}
+
+ul {
+    list-style-type: none; /* إزالة نقاط القائمة */
+    padding: 0; /* إزالة الهوامش الداخلية للقائمة */
+}
+
+li {
+    margin-bottom: 5px; /* هامش لأسفل كل عنصر في القائمة للأجهزة المحمولة */
+}
+
+a {
+    color: #007bff; /* لون الروابط */
+    text-decoration: none; /* إزالة تأثير التحتية عند التحويل */
+}
+
+a:hover {
+    text-decoration: underline; /* تحتية الرابط عند تحويل المؤشر عليه */
+}
+
+/* تصميم الروابط للأعلى */
+.nav-links {
+    position: absolute; /* تحديد وضع الروابط */
+    top: 10px; /* تحديد المسافة من الجزء العلوي للصفحة */
+    left: 50%; /* تحديد المسافة من الجهة اليمنى للصفحة */
+    transform: translateX(-50%); /* تحريك الروابط إلى الوسط بناءً على الجهة اليسرى */
+}
+
+/* Media Query للأجهزة المحمولة */
+@media (max-width: 768px) {
     body {
-        /* إضافة تنسيقات CSS خاصة للهواتف المحمولة هنا */
+        font-size: 16px; /* حجم الخط للأجهزة المحمولة الصغيرة */
     }
-
-    /* إضافة تنسيقات إضافية لعناصر أخرى حسب الحاجة */
 }
