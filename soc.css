@@ -45,6 +45,7 @@ li {
 a {
     color: #007bff; /* لون الروابط */
     text-decoration: none; /* إزالة تأثير التحتية عند التحويل */
+    font-size: 24px; /* تكبير حجم الروابط */
 }
 
 a:hover {
